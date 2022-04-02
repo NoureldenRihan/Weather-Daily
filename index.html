@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Start Navbar -->
+
+    <nav class="navbar">
+      <div class="container">
+        <img
+          class="logo"
+          src="/imgs/Weather Daily Logo cropped.png"
+          alt="Weather Daily Logo"
+        />
+        <h3>Daily detailed Weather Updates</h3>
+      </div>
+    </nav>
+
+    <!-- End Navbar -->
+    <!-- Start CitySelect -->
+
+    <div class="citySelect">
+      <div class="container">
+        <select name="City" class="City" id="CitiesSelection">
+          <option value="-- Select a City --">-- Select a City --</option>
+        </select>
+        <input
+          type="submit"
+          value="Check Weather"
+          onclick="getWeatherData();"
+        />
+      </div>
+    </div>
+
+    <!-- End CitySelect -->
+    <!-- Start WeatherData -->
+
+    <div class="weatherData">
+      <div class="container">
+        <div class="cityData" id="cityData">
+          <h1 class="nodata">Search for A City</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- End WeatherData -->
+    <!-- Start Footer -->
+
+    <footer id="footer">
+      <div class="container">
+        <h1>Made by <a href="">Nourelden Rihan</a></h1>
+        <h3>
+          <a
+            href="https://www.flaticon.com/free-icons/weather"
+            title="weather icons"
+            >Weather icons created by iconixar - Flaticon</a
+          >
+        </h3>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+    <script src="script.js"></script>
+  </body>
+</html>
