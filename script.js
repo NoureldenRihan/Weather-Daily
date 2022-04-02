@@ -1,6 +1,7 @@
 let citiesData = [];
 let selectionArea = document.getElementById("CitiesSelection");
 
+// Checks if a city isn't already added to add it to the Cities Data Array
 const addCity = (cityName) => {
   let found = false;
   let cityData = {
@@ -14,9 +15,22 @@ const addCity = (cityName) => {
   }
   if (!found) {
     citiesData.push(cityData);
+    citiesData.sort((a, b) => {
+      let fa = a.name.toLowerCase(),
+        fb = b.name.toLowerCase();
+
+      if (fa < fb) {
+        return -1;
+      }
+      if (fa > fb) {
+        return 1;
+      }
+      return 0;
+    });
   }
 };
 
+//Adds Cities Options according to the available cities in the Cities Data Array
 const setCitySelection = () => {
   for (let i = 0; i < citiesData.length; i++) {
     let newOption = new Option(citiesData[i].name, citiesData[i].name);
@@ -24,6 +38,7 @@ const setCitySelection = () => {
   }
 };
 
+// Gets Weather Data According to the Selected City
 const getWeatherData = () => {
   document.getElementById("footer").style.position = "static";
   let selectedCity = citiesData.filter(
@@ -36,6 +51,7 @@ const getWeatherData = () => {
     .then((data) => setupCity(data));
 };
 
+//Setting up Weather Image according to the Weather State
 const imgPathFinder = (state) => {
   switch (state) {
     case "Clear":
@@ -55,6 +71,7 @@ const imgPathFinder = (state) => {
   }
 };
 
+//Sets Up Weather Data Template According to the Selected City
 const setupCity = (data) => {
   let cityDataDiv = document.getElementById("cityData");
   cityDataDiv.innerHTML = `
@@ -87,6 +104,7 @@ const setupCity = (data) => {
 
 document.getElementById("footer").style.position = "absolute";
 
+//Adding Cities
 addCity("Kabul");
 addCity("Tirana");
 addCity("Algiers");
