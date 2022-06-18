@@ -22,33 +22,37 @@
     </nav>
 
     <!-- End Navbar -->
-    <!-- Start CitySelect -->
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="holder">
+      <!-- Start CitySelect -->
 
-    <div class="citySelect">
-      <div class="container">
-        <select name="City" class="City" id="CitiesSelection">
-          <option value="-- Select a City --">-- Select a City --</option>
-        </select>
-        <input
-          type="submit"
-          value="Check Weather"
-          onclick="getWeatherData();"
-        />
-      </div>
-    </div>
-
-    <!-- End CitySelect -->
-    <!-- Start WeatherData -->
-
-    <div class="weatherData">
-      <div class="container">
-        <div class="cityData" id="cityData">
-          <h1 class="nodata">Search for A City</h1>
+      <div class="citySelect">
+        <div class="container">
+          <select name="City" class="City" id="CitiesSelection">
+            <option value="-- Select a City --">-- Select a City --</option>
+          </select>
+          <input
+            type="submit"
+            value="Check Weather"
+            onclick="getWeatherData();"
+          />
         </div>
       </div>
-    </div>
 
-    <!-- End WeatherData -->
+      <!-- End CitySelect -->
+      <!-- Start WeatherData -->
+
+      <div class="weatherData">
+        <div class="container">
+          <div class="cityData" id="cityData">
+            <h1 class="nodata">Search for A City</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- End WeatherData -->
+    </div>
     <!-- Start Footer -->
 
     <footer id="footer">

@@ -100,9 +100,8 @@ const setupCity = (data) => {
     </div>
   </div>
   `;
+  document.querySelector("body").style.minHeight = "100%";
 };
-
-document.getElementById("footer").style.position = "absolute";
 
 //Adding Cities
 addCity("Kabul");
@@ -150,7 +149,7 @@ addCity("Athens");
 addCity("Jakarta");
 addCity("Dublin");
 addCity("Rome");
-addCity("Tokya");
+addCity("Tokyo");
 addCity("Santiago");
 addCity("Moroni");
 addCity("Havana");
